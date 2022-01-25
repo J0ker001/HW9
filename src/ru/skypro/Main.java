@@ -18,15 +18,14 @@ public class Main {
         String famalyPush = "Пушкин";
         int yearPublishingPush = 1933;
 
-        Author author = new Author(name, famaly);
-        Book book = new Book(nameBook, author.getName() + " " + author.getFamaly(), yearPublishing);
+
+        Book book = new Book(nameBook, new Author(name, famaly), yearPublishing);
 
         book.setYearPublishing(1999);
         System.out.println("book.getYearPublishing() = " + book.getYearPublishing());
 
 
-        Author author1 = new Author(namePush, famalyPush);
-        Book book1 = new Book(nameBookPush, author.getName(), yearPublishingPush);
+        Book book1 = new Book(nameBookPush, new Author(namePush, famalyPush), yearPublishingPush);
 
         book.setYearPublishing(2022);
         System.out.println("book.getYearPublishing() = " + book.getYearPublishing());
