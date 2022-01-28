@@ -1,4 +1,5 @@
 package ru.skypro.lesson9;
+
 import java.util.Objects;
 
 public class Book {
@@ -39,11 +40,12 @@ public class Book {
             return false;
         }
         Book a = (Book) other;
-        return nameBook.equals(a.nameBook);
+        return nameBook.equals(a.nameBook)
+                && author.equals(a.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nameBook);
+        return Objects.hash(nameBook, author);
     }
 }
